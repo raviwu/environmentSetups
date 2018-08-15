@@ -12,3 +12,6 @@ A plain shell script is good to go.
 
 A starter for VScode json configurationa. 
 
+### Vim
+
+[Vgod's vimrc](https://github.com/vgod/vimrc) is a good starting point.
