@@ -1,0 +1,34 @@
+{
+  "editor.fontFamily": "Source Code Pro for Powerline",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 14,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.minimap.enabled": true,
+  "editor.dragAndDrop": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "git.confirmSync": false,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "editor.renderWhitespace": "all",
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "ruby.lint": {
+    "reek": false,
+    "rubocop": {
+      "lint": true,
+      "rails": true
+    },
+    "ruby": false,
+    "fasterer": false,
+    "debride": false,
+    "ruby-lint": false
+  },
+  "workbench.iconTheme": "vs-seti",
+  "workbench.welcome.enabled": false,
+  "files.trimTrailingWhitespace": true
+}
