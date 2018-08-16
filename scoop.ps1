@@ -29,6 +29,13 @@ scoop install gradle
 # AWS cli tool
 pip install awscli
 
+# Communication Tools
+scoop install telegram
+scoop install slack
+
+# Developer Tools
+scoop install postman
+
 # IDE / Editor
 scoop install vim
 scoop install vscode
