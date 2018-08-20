@@ -18,3 +18,18 @@ if ($javaPath.length -eq 0) {
     $newPath = $javaPath + ";" + $path
     [System.Environment]::SetEnvironmentVariable("PATH",$newPath,"USER")
 }
+
+$mavenHome = [System.Environment]::GetEnvironmentVariable("MAVEN_HOME","USER")
+
+if ($mavenHome.length -eq 0) {
+    $mavenHome = [System.Environment]::SetEnvironmentVariable("MAVEN_HOME","your_path_to_maven_bin","USER")
+}
+
+$mavenPath = [System.Environment]::GetEnvironmentVariable("MAVEN_PATH","USER")
+
+if ($mavenPath.length -eq 0) {
+    $mavenPath = [System.Environment]::SetEnvironmentVariable("MAVEN_PATH",$mavenHome,"USER")
+    $path = [System.Environment]::GetEnvironmentVariable("PATH","USER")
+    $newPath = $mavenPath + ";" + $path
+    [System.Environment]::SetEnvironmentVariable("PATH",$newPath,"USER")
+}
