@@ -1,0 +1,19 @@
+{
+  "editor.fontSize": 16,
+  "editor.lineHeight": 16,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.minimap.enabled": true,
+  "editor.dragAndDrop": true,
+  "terminal.integrated.fontSize": 14,
+  "git.confirmSync": false,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "editor.renderWhitespace": "all",
+  "window.zoomLevel": 0,
+  "editor.tabSize": 4,
+  "workbench.iconTheme": "vs-seti",
+  "files.trimTrailingWhitespace": true
+}
