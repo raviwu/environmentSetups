@@ -33,3 +33,12 @@ if ($mavenPath.length -eq 0) {
     $newPath = $mavenPath + ";" + $path
     [System.Environment]::SetEnvironmentVariable("PATH",$newPath,"USER")
 }
+
+$pyScriptsPath = [System.Environment]::GetEnvironmentVariable("PY_SCRIPTS_PATH", "USER")
+
+if ($pyScriptsPath.length -eq 0) {
+    $pyScriptsPath = [System.Environment]::SetEnvironmentVariable("PY_SCRIPTS_PATH", "~\AppData\Roaming\Python\Python37\Scripts", "USER")
+    $path = [System.Environment]::GetEnvironmentVariable("PATH", "USER")
+    $newPath = $pyScriptsPath + ";" + $path
+    [System.Environment]::SetEnvironmentVariable("PATH", $newPath, "USER")
+}

@@ -28,12 +28,15 @@ scoop install gradle
 
 # AWS cli tool
 pip install awscli
+pip install --user aws-sam-cli
 
 # Communication Tools
 scoop install telegram
 scoop install slack
 
 # Developer Tools
+scoop install docker
+scoop install vagrant
 scoop install postman
 
 # IDE / Editor
