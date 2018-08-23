@@ -26,16 +26,26 @@ python -m pip install --upgrade pip
 scoop install maven
 scoop install gradle
 
-# AWS cli tool
+# AWS cli tool and lambda cli
 pip install awscli
+
+scoop install docker
 pip install --user aws-sam-cli
+
+$pyScriptsPath = [System.Environment]::GetEnvironmentVariable("PYSCRIPTS_PATH", "USER")
+
+if ($pyScriptsPath.length -eq 0) {
+    $pyScriptsPath = [System.Environment]::SetEnvironmentVariable("PYSCRIPTS_PATH","~\AppData\Roaming\Python\Python37\Scripts", "USER")
+    $path = [System.Environment]::GetEnvironmentVariable("PATH", "USER")
+    $newPath = $pyScriptsPath + ";" + $path
+    [System.Environment]::SetEnvironmentVariable("PATH", $newPath, "USER")
+}
 
 # Communication Tools
 scoop install telegram
 scoop install slack
 
 # Developer Tools
-scoop install docker
 scoop install vagrant
 scoop install postman
 
