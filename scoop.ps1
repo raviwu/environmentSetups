@@ -35,6 +35,9 @@ scoop install gradle
 scoop install groovy
 scoop install springboot
 
+# Java IDE: IDEA
+scoop install idea
+
 # AWS cli tool and lambda cli
 pip install awscli
 
