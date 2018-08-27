@@ -6,7 +6,7 @@ scoop uninstall scoop
 
 # Scoop installation
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+Invoke-Expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 # add Git so that scoop can install packages from extras bucket
 scoop install git
@@ -22,9 +22,18 @@ scoop install curl
 scoop install cacert
 python -m pip install --upgrade pip
 
+# Java installation
+scoop bucket add java
+scoop install find-java
+scoop install oraclejdk10
+scoop install oraclejdk-lts
+scoop reset oraclejdk-lts
+
 # Java Tools
 scoop install maven
 scoop install gradle
+scoop install groovy
+scoop install springboot
 
 # AWS cli tool and lambda cli
 pip install awscli
@@ -35,7 +44,7 @@ pip install --user aws-sam-cli
 $pyScriptsPath = [System.Environment]::GetEnvironmentVariable("PYSCRIPTS_PATH", "USER")
 
 if ($pyScriptsPath.length -eq 0) {
-    $pyScriptsPath = [System.Environment]::SetEnvironmentVariable("PYSCRIPTS_PATH","~\AppData\Roaming\Python\Python37\Scripts", "USER")
+    $pyScriptsPath = [System.Environment]::SetEnvironmentVariable("PYSCRIPTS_PATH", "~\AppData\Roaming\Python\Python37\Scripts", "USER")
     $path = [System.Environment]::GetEnvironmentVariable("PATH", "USER")
     $newPath = $pyScriptsPath + ";" + $path
     [System.Environment]::SetEnvironmentVariable("PATH", $newPath, "USER")
@@ -57,4 +66,4 @@ scoop install vscode
 # https://github.com/lukesampson/concfg
 scoop install concfg
 concfg presets
-concfg import solarized-dark
+concfg import onedark
