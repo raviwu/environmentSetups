@@ -30,5 +30,6 @@
   },
   "workbench.iconTheme": "vs-seti",
   "workbench.welcome.enabled": false,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "java.configuration.updateBuildConfiguration": "automatic"
 }

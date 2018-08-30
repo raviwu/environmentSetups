@@ -15,5 +15,6 @@
   "window.zoomLevel": 0,
   "editor.tabSize": 4,
   "workbench.iconTheme": "vs-seti",
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "java.configuration.updateBuildConfiguration": "automatic"
 }
