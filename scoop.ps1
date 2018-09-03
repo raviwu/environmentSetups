@@ -41,24 +41,30 @@ scoop install idea
 # AWS cli tool and lambda cli
 pip install awscli
 
-scoop install docker
-pip install --user aws-sam-cli
+# docker required VM provider, which needs to have admin role for installation
+# scoop install docker
+# pip install --user aws-sam-cli
 
-$pyScriptsPath = [System.Environment]::GetEnvironmentVariable("PYSCRIPTS_PATH", "USER")
+# $pyScriptsPath = [System.Environment]::GetEnvironmentVariable("PYSCRIPTS_PATH", "USER")
 
-if ($pyScriptsPath.length -eq 0) {
-    $pyScriptsPath = [System.Environment]::SetEnvironmentVariable("PYSCRIPTS_PATH", "~\AppData\Roaming\Python\Python37\Scripts", "USER")
-    $path = [System.Environment]::GetEnvironmentVariable("PATH", "USER")
-    $newPath = $pyScriptsPath + ";" + $path
-    [System.Environment]::SetEnvironmentVariable("PATH", $newPath, "USER")
-}
+# if ($pyScriptsPath.length -eq 0) {
+#     $pyScriptsPath = [System.Environment]::SetEnvironmentVariable("PYSCRIPTS_PATH", "~\AppData\Roaming\Python\Python37\Scripts", "USER")
+#     $path = [System.Environment]::GetEnvironmentVariable("PATH", "USER")
+#     $newPath = $pyScriptsPath + ";" + $path
+#     [System.Environment]::SetEnvironmentVariable("PATH", $newPath, "USER")
+# }
 
 # Communication Tools
 scoop install telegram
 scoop install slack
 
 # Developer Tools
-scoop install vagrant
+
+# vagrant required VM provider, which needs to have admin role for installation
+# scoop bucket add nonportable
+# scoop install virtualbox-np
+# scoop install vagrant
+
 scoop install postman
 
 # IDE / Editor
