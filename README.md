@@ -6,7 +6,7 @@ Install `make` tools for your windows gitbash:
 
 ```shell
 # In your gitbash shell under root folder of this repo:
-unzip -j libs/make-4.2.1-without-guile-w32-bin.zip -d ~/AppData/Local/Programs/Git/mingw64
+unzip libs/make-4.2.1-without-guile-w32-bin.zip -d ~/AppData/Local/Programs/Git/mingw64
 ```
 
 ## MacOS
