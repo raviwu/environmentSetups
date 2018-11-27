@@ -38,6 +38,10 @@ scoop install springboot
 # Java IDE: IDEA
 scoop install idea
 
+# Documentation Tools
+scoop install pandoc
+scoop install latex
+
 # AWS cli tool and lambda cli
 pip install awscli
 
