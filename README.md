@@ -23,3 +23,16 @@ A starter for VScode json configurationa.
 ### Vim
 
 [Vgod's vimrc](https://github.com/vgod/vimrc) is a good starting point.
+
+## Jenkins
+
+Quick construct a basic Jenkins instance to develop your side projects, run:
+
+```
+make jenkins-initialize
+```
+
+and visit `http://localhost:9090`
+
+You get a no user auth Jenkins playground with blank plugins.
+
