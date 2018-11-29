@@ -30,6 +30,14 @@ Quick construct a basic Jenkins instance to develop your side projects, run:
 
 ```
 make jenkins-initialize
+
+# Wait until the plugins installed and the running
+# instanct, use ctrl+C to terminate it.
+
+# For windows, restart are not supported, need to
+# manual restart the jenkins instance.
+
+make jenkins-run
 ```
 
 and visit `http://localhost:9090`
