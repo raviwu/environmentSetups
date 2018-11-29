@@ -5,8 +5,9 @@ For better unifying the windows command line setups, recommend using [scoop](htt
 Install `make` tools for your windows gitbash:
 
 ```shell
-# In your gitbash shell under root folder of this repo:
-unzip libs/make-4.2.1-without-guile-w32-bin.zip -d ~/AppData/Local/Programs/Git/mingw64
+# In your gitbash shell under root folder of this repo
+# Take the scoop installed git for example:
+unzip libs/make-4.2.1-without-guile-w32-bin.zip -d ~/scoop/apps/git/current/mingw64
 ```
 
 ## MacOS
