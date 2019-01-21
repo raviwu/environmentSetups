@@ -4,7 +4,7 @@ import java.util.logging.Logger
 def logger = Logger.getLogger("")
 def installed = false
 def initialized = false
-def pluginParameter="saferestart gradle pipeline-model-definition gitlab-plugin"
+def pluginParameter="saferestart gradle pipeline-model-definition gitlab-plugin confluence-publisher"
 def plugins = pluginParameter.split()
 logger.info("" + plugins)
 def instance = Jenkins.getInstance()
