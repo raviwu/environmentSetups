@@ -34,6 +34,13 @@ fi
 # Update homebrew recipes
 brew update
 
+# Install ansible
+git clone git://github.com/ansible/ansible.git
+cd ./ansible
+source ./hacking/env-setup
+sudo easy_install pip
+sudo pip install paramiko PyYAML jinja2
+
 # Install GNU core utilities (those that come with OS X are outdated)
 brew tap homebrew/versions
 brew install coreutils
