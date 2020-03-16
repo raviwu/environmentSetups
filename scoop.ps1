@@ -25,9 +25,7 @@ python -m pip install --upgrade pip
 # Java installation
 scoop bucket add java
 scoop install find-java
-scoop install oraclejdk10
-scoop install oraclejdk-lts
-scoop reset oraclejdk-lts
+scoop install ojdkbuild8-full
 
 # Java Tools
 scoop install maven
@@ -70,6 +68,7 @@ scoop install slack
 # scoop install vagrant
 
 scoop install postman
+scoop install googlechrome
 
 # IDE / Editor
 scoop install vim
