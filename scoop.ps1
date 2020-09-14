@@ -8,6 +8,9 @@ scoop uninstall scoop
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Invoke-Expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
+# https://github.com/lukesampson/scoop/issues/3838
+scoop install lessmsi; scoop config MSIEXTRACT_USE_LESSMSI $true
+
 # add Git so that scoop can install packages from extras bucket
 scoop install git
 scoop install openssh
