@@ -6,15 +6,17 @@ scoop uninstall scoop
 
 # Scoop installation
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+# ENV config required if you're using some Virtual Machine
+[environment]::setEnvironmentVariable('SCOOP','E:\writable\XXX\scoop','User')
+# Installing Scoop
 Invoke-Expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 # https://github.com/lukesampson/scoop/issues/3838
 scoop install lessmsi; scoop config MSIEXTRACT_USE_LESSMSI $true
 
 # add Git so that scoop can install packages from extras bucket
-scoop install git
-scoop install openssh
-[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
+scoop install git-with-openssh
+[environment]::setEnvironmentVariable('GIT_SSH', (resolve-path (scoop which ssh)), 'User')
 scoop bucket add extras
 
 # Common unix like apps and python
@@ -29,6 +31,9 @@ python -m pip install --upgrade pip
 scoop bucket add java
 scoop install find-java
 scoop install ojdkbuild8-full
+
+# You may need to reset the JAVA_HOME if the installation is not finding the JVM
+scoop reset ojdkbuild8-full
 
 # Java Tools
 scoop install maven
